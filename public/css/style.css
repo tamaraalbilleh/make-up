@@ -1,0 +1,37 @@
+body{
+text-align: center;
+width: 960px;
+margin: auto;
+font-size: 20px;
+}
+.cards {
+    display: flex;
+    justify-content:space-between ;
+    flex-wrap: wrap;
+}
+.cards section{
+    margin: 20px;
+    border: 2px black solid;
+    padding: 20px;
+}
+.no {
+    text-align: center;
+    font-size: 60px;
+    color: red;
+    margin-top : 50px
+}
+h1 { 
+    font-size: 60px;
+
+}
+a {
+    text-decoration: none;
+    color: blue;
+    font-size: 24px;
+    margin: 20px;
+}
+/* input[type='text']{
+    padding: 10px;
+    height: 100px;
+    width: 200px;
+} */

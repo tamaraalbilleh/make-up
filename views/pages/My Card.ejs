@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Card</title>
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/style.css">
 </head>
 <body>
     <h1>My Card</h1>
-    <section>
+    <a href="/">Home</a>
+    <br>
+    <a href="/all">Go to all products from Maybelline</a>
+    <br>
+    <a href="/myCard"> Go to my Card Page</a>
+    <br>
+    <section class="cards">
        
         <% if (card.length ===0){ %> 
-            <h2>No Products in Your Card</h2>
+            <h2 class="no">No Products in Your Card</h2>
             <% } %> 
             <% if ( card.length !== 0 ){ %> 
 
