@@ -10,6 +10,10 @@
     <h1>My Card</h1>
     <section>
        
+        <% if (card.length ===0){ %> 
+            <h2>No Products in Your Card</h2>
+            <% } %> 
+            <% if ( card.length !== 0 ){ %> 
 
         <% card.forEach (item=>{ %>
             <section>
@@ -23,7 +27,8 @@
             </section>
             <br>
        <% }) %> 
-       
+       <% } %> 
+
     </section>
 </body>
 </html>

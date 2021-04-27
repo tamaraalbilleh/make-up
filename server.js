@@ -31,6 +31,9 @@ function productByPriceHandler (req,res){
     let dataBody = data.body;
     res.render('pages/Product By Price', {card: dataBody})
     })
+    .catch (error=>{
+        res.send(error)
+    })
 }
 
 server.get('/all', allProductHandler)
@@ -42,6 +45,9 @@ function allProductHandler (req,res){
             return new Maybelline (item);
         })
         res.render('pages/Maybelline Products',{card : resultData})
+    })
+    .catch (error=>{
+        res.send (error)
     })
 }
 
@@ -59,11 +65,7 @@ server.get ('/myCard' , myCardHandler)
 function myCardHandler (req,res){
     let sql = `SELECT * FROM makeup;`;
     client.query(sql).then(result=>{
-        if (result.rows){
             res.render ('pages/My Card',{card : result.rows})
-        }else if (!result.rows){
-            res.render ('pages/noProdcts') /// fix
-        }
     })
 }
 
@@ -96,7 +98,6 @@ function deleteHandler (req,res){
 }
 
 
-// (each card should have these data: name, price, image, description, and add-to-card button
 function Maybelline (data){
     this.name = data.name;
     this.price = data.price;
