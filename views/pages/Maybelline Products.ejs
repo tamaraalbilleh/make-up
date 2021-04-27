@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Maybelline Products</h1>
+    <section>
+        <% card.forEach (item=>{ %>
+        <section>
+            <h2><%= item.name %> </h2>
+            <h3><%= item.price %> </h3>
+            <img src="<%= item.image %> " alt="">
+            <p><%= item.description %> </p>
+           <form action="/add" method="POST">
+            <input type="hidden" name="name" id="name" value="<%= item.name %>" >
+            
+            
+            <input type="hidden" name="price" id="price" value="<%= item.price %>">
+            
+            <input type="hidden" name="image" id="image" value="<%= item.image %>">
+            
+            <input type="hidden" name="description" id="description" value="<%= item.description %>">
+
+
+        <input type="submit" value="add-to-card">
+        </form>
+        </section>
+       <% }) %> 
+        
+    </section>
+</body>
+</html>

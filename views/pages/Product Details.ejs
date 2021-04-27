@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Product Details</h1>
+    <h2><%= card.name %> </h2>
+    <h3><%= card.price %> </h3>
+    <img src="<%= card.image %> " alt="">
+    <p><%= card.description %> </p>
+
+    <br>
+    <form action="/myCard/<%= card.id %>?_method=PUT" method="POST">
+
+        <input type="text" name="name" id="name" value="<%= card.name %>">
+
+        <input type="text" name="price" id="price" value="<%= card.price %>">
+
+        <input type="text" name="image" id="image" value="<%= card.image %>">
+
+        <input type="text" name="description" id="description" value="<%= card.description %>">
+
+    <input type="submit" value="Update">
+    </form>
+    <br>
+    <form action="/myCard/<%= card.id %>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete">
+    </form>
+</body>
+</html>
