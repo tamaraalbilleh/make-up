@@ -12,7 +12,7 @@ server.use(cors());
 const superagent = require('superagent');
 const pg = require ('pg')
 const client = new pg.Client({ connectionString: process.env.DATABASE_URL,
-    //  ssl: { rejectUnauthorized: false }
+     ssl: { rejectUnauthorized: false }
      });
 const methodOverride = require('method-override');
 server.use(methodOverride('_method'));
